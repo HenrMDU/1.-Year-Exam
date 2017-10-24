@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset= "UTF-8">
+    <title>Foodfein</title>
+    <meta name="description" content="Velkommen hos Foodfein. Vi byder på bl.a. hjemmelavet brød, kage, kaffe, is og øvrige delikatesser. Hos os går vi ikke på kompromis med kvaliteten og er derfor selvproducerende ved de fleste af vores råvarer.">
+    <meta name="keywords" content="Foodfein, foodfein.dk, Aarhus, cafe, café, takeaway, togo, bageri, mejeri, is, brød, kage, sandwich, smørrebrød, kaffe, kvalitet, naturlig, sund, mad, spise ude, sundhed, delikatesser, specialisering, madhåndværk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="style/reset.css" rel="stylesheet"/> <!-- Reset Style (CSS) -->
+    <link href="style/style.css" rel="stylesheet"/> <!-- Apply Style (CSS) -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> <!-- JQuery -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- JQuery UI -->
+    <script src="https://jonthornton.github.io/jquery-timepicker/jquery.timepicker.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jonthornton.github.io/jquery-timepicker/jquery.timepicker.css">
+    <script src="script/script.js"></script>
+    <script src="script/to_go.php"></script>
+</head>
+
+    <body>
+        <div id="wrapper">
+            <!-- MOBILE NAVIGATION -->
+            <!-- Tilføj onclick="openNav()" til et element for at det åbner mobil navigationen -->
+            <div id="mobile_nav" onclick="openNav()"></div> <!-- Icon der åbner menuen -->
+            
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <!-- Knap til at lukke menuen -->
+
+                <a href="#wrapper" onclick="closeNav();"><img src="img/foodfein_logo.png" alt="Foodfein Logo" height="150" width="150"></a>
+                <a href="#page_menu_anchor" onclick="closeNav();">MENUKORT</a>
+                <a href="#page_bestilling_anchor" onclick="closeNav();" style="color:#eb5b29;">TO GO</a>
+                <a href="#page_om_foodfein_anchor" onclick="closeNav();">OM FOODFEIN</a>
+                <a href="#page_info_anchor" onclick="closeNav();">KONTAKT</a>
+            </div>
+            
+            <div onclick="closeNav();"> <!-- MOBILE NAVIGATION CLOSE: hvis man klikker lukkes menuen -->
+            <!-- FOLLOW NAVIGATION -->
+            <nav id="follow_nav">
+                <ul>
+                    <li><a href="#page_menu_anchor">MENUKORT</a></li>
+                    <li><a href="#page_bestilling_anchor">TO GO</a></li>
+                    <li><a href="#wrapper"><img src="img/foodfein_logo_mini.png" alt="Foodfein Logo" width="40" height="40"></a></li>
+                    <li><a href="#page_om_foodfein_anchor">OM FOODFEIN</a></li>
+                    <li><a href="#page_info_anchor">KONTAKT</a></li>
+                </ul>
+            </nav> <!-- follow_nav -->
+
+            <!-- HEADER: PAGE VELKOMMEN + NYHED -->
+            <header>
+            <img src="img/foodfein_logo.png" id="foodfein_logo_mobile" alt="Foodfein Logo" width="120" height="120">
+                <!-- MAIN/TOP NAVIGATION -->
+                <nav id="main_nav">
+                    <ul>
+                        <li><a href="#page_menu_anchor">MENUKORT</a></li>
+                        <li><a href="#page_bestilling_anchor"><span class="color_orange">TO GO</span></a></li>
+                        <li><img src="img/foodfein_logo.png" alt="Foodfein Logo" id="foodfein_logo" width="120" height="120"></li>
+                        <li><a href="#page_om_foodfein_anchor">OM FOODFEIN</a></li>
+                        <li><a href="#page_info_anchor">KONTAKT</a></li>
+                    </ul>
+                </nav> <!-- main_nav -->
+                
+                <section><div class="orange_box"></div>
+                    <h2>NYHED</h2>
+                    <p>Du kan nu bestille mad online <br>og selv hente det i butikken <br> når du har lyst!<br><br>
+Du kan finde den nye funktion <br> under <a href="#page_bestilling_anchor">TO GO</a> her på siden. 
+</p>
+                </section>
+
+                <div class="social_icons">
+                    <a href="https://www.facebook.com/Foodfein?rf=114975418709937" target="blank" title="Facebook"><img src="img/facebook.png" alt="Facebook" width="32" height="32"></a>
+                    <a href="#" target="blank" title="Instagram"><img src="img/instagram.png" alt="Instagram" width="32" height="32"></a>
+                </div>
+
+                <div id="arrow_down"><img src="img/arrow_down.png" alt="Arrow" width="25" height="25"></div>
+            </header>
+
+
+            <main>
+            <!-- PAGE FOODFEIN -->
+                <article id="page_foodfein">
+                    <section><div class="orange_box"></div>
+                        <h2>FOODFEIN</h2>
+                        <p>Foodfein benytter sig af kvalitetsråvarer, som er helt uden tilsat tilsætnings-stoffer. 
+                            Alt er lavet fra bunden og vi er selvproducerende ved de fleste af de produkter i caféen. 
+                            Vi byder på en unik smagsoplevelse for dig med sans for dét ekstra og som tænker over hvad du spiser. 
+                            Vores café er spækket med specialvarer, som vi har kælet lidt ekstra for. 
+                            Læs mere <a href="#page_om_foodfein_anchor" style="text-decoration: none; color: #3c3c3b; font-weight: 700;" >OM FOODFEIN</a> eller kom ned i vores café. Vi glæder os til at se dig. </p>
+                        <div id="page_foodfein_img"></div>
+                    </section>
+                </article>
+            
+
+            <!-- PAGE MENUKORT -->
+            <span class="anchor" id="page_menu_anchor"></span>
+                <article id="page_menu"> <!-- add pop-up box -->
+                    <section><div class="orange_box"><h1>MENUKORT</h1></div>
+                        <p><span class="font_center">Se vores brede udvalg på vores menukort her!<br><br>
+
+Alt vores mad er selvfølgelig helt uden tilsætningsstoffer.</span></p><br><button class="myBtn_multi">MENUKORT</button>
+                    </section>
+
+                    <div id="page_menu_img"></div>
+
+                </article>
+
+
+            <!-- PAGE ONLINE BESTILLING -->
+                <span class="anchor" id="page_bestilling_anchor"></span>
+                <article id="page_bestilling"> <!-- add pop-up box -->
+                    <section><div class="orange_box"><h1>TO GO</h1></div>
+                        <p>VÆLG CAFÉ</p>
+                        <button class="myBtn_multi">AARHUS C</button>              
+                        
+                        
+                        <button class="myBtn_multi">ÅBYHØJ</button>
+
+
+
+                    </section>
+
+                    <div id="page_bestilling_img"></div>
+                </article>
+
+
+            <!-- PAGE OM FOODFEIN -->
+                <span class="anchor" id="page_om_foodfein_anchor"></span>
+                <article id="page_om_foodfein">
+                    <div class="w3-container">
+                    <!-- NAVIGATION HERE -->
+                        <div class="w3-center">
+                            <a href="#page_om_foodfein_slide_anchor"><span class="w3-button demo" onclick="currentDiv(1)" >FOODFEIN</span></a>
+                            <a href="#page_om_foodfein_slide_anchor"><span class="w3-button demo" onclick="currentDiv(2)">MØLLERI</span></a>
+                            <a href="#page_om_foodfein_slide_anchor"><span class="w3-button demo" onclick="currentDiv(3)">KAFFE</span></a>
+                            <a href="#page_om_foodfein_slide_anchor"><span class="w3-button demo" onclick="currentDiv(4)">ISMEJERI</span></a>
+                        </div>
+                    </div>
+<span class="anchor_slide" id="page_om_foodfein_slide_anchor"></span>
+                    <div class="w3-content">
+                        <div class="mySlides">
+                            <section><div class="orange_box"><h1>OM FOODFEIN</h1></div>
+                                <h2>FOODFEIN</h2>
+                                <p>Hos foodfein har vi specialiseret os i sunde, naturlige produkter, så du altid ved hvad du får. I køkkenet benytter vi os af egne producerede varer, samt nøje udvalgte varer købt fra lokale dygtige leverandører.
+<br><br>Caféen er indrettet i et åbent miljø hvilket gør, at der er frit udsyn og du derfra kan følge med i køkkenet. Derfor oplever du også duften fra det frisk bagte brød fra butikkens eget mikrobageri, samt muligheden for at opleve hvordan korn bliver til mel i vores eget mikromølleri.
+<br><br>Det er også muligt at købe mange af vores produkter med hjem. Vi sælger alt for mel fra egen stenkværn, til pestoer, kaffe og vine.
+</p><br><div class="icon_center"><a href="#page_om_foodfein_anchor"><img class="arrow_up" src="img/arrow_up.png" alt="Arrow" width="15" height="15"></a></div>
+                            </section>
+                            <div id="foodfein_img"></div>
+                        </div>
+
+                        <div class="mySlides">
+                            <section><div class="orange_box"><h1>OM FOODFEIN</h1></div>
+                                <h2>MØLLERI</h2>
+                                <p>Hos Foodfein er vi stolte over at være et mikrobageri. Vi maler nemlig vores helt eget mel for at opnå den bedst mulige kvalitet til at bage vores brød og kager. Dette sker på vores stenkværn, som står placeret midt i caféen. 
+<br><br><span class="font_i">"Grundlaget for at producere vores eget brød er, at vi gerne vil vide hvad vi serverer for kunderne og for at sikre den høje kvalitet"</span><br> <span class="font_small">- Allan Enevoldsen, indehaver af foodfein.</span><br><br>
+Vores hvedemel er fyldt med klid og skaldele, som er med til at gøre at vores mel er sundere end almindeligt hvedemel. Er du på jagt efter hvid hvede er du havnet det forkerte sted, da vores mel er lidt mørkere og er fyldt med vitaminer.
+</p><br><div class="icon_center"><a href="#page_om_foodfein_anchor"><img class="arrow_up" src="img/arrow_up.png" alt="Arrow" width="15" height="15"></a></div>
+                            </section>
+                            <div id="mølleri_img"></div>
+                        </div>
+
+                        <div class="mySlides">
+                            <section><div class="orange_box"><h1>OM FOODFEIN</h1></div>
+                                <h2>KAFFE</h2>
+                                <p>Hos Foodfein sætter vi pris på en god kop kaffe. Vi rister vores egne arabica kaffebønner og du får hvad du betaler for. Vi orker nemlig ikke den sædvanlige, triste kedelige kaffe, som ofte en endt risteproces bliver fyldt med vand for at blive mere volumniøs. 
+                                <br><br>Foodfein byder på et bredt udvalg med alt fra mindre syrlige kaffer til kaffe med masser af syre og kraft. Du kan enten nyde din kaffe i caféen med et stykke kage eller et af vores lækre brød, eller tage din kaffe med to go til når det hele bare skal gå lidt stærkere. 
+                                <br><br>Det er også muligt at købe vores kaffebønner med hjem, så du kan servere en god kop kaffe for dine gæster. 
+</p><br><div class="icon_center"><a href="#page_om_foodfein_anchor"><img class="arrow_up" src="img/arrow_up.png" alt="Arrow" width="15" height="15"></a></div>
+                            </section>
+                            <div id="kaffe_img"></div>
+                        </div>
+
+                        <div class="mySlides">
+                            <section><div class="orange_box"><h1>OM FOODFEIN</h1></div>
+                                <h2>ISMEJERI</h2>
+                                <p>Friske nødder, frugter og måske lidt grønt, alt efter hvad sæsonen byder på. Hos Foodfein er vi stolte af, at byde dig velkommen til vores helt eget ismejeri. Vores is er selvfølgelig helt uden tilsætning og paste og er 100% økologisk.
+<br><br>Vores is er lavet på god, dansk komælk fra kvalitetslandmænd, som ligesom os ikke vil gå på kompromis med kvaliteten. Vi har på nuværende tidspunkt to varianter is; chokolade og vanilje, men arbejder selvfølgelig hele tiden på at udvikle nye is. 
+<br><br>Vores vanilje er lavet på ægte polynesiske vaniljestænger og er en god kontrast til vores en smule stærkere chokoladeis, som er lavet på ægte mørk chokolade. 
+</p><br><div class="icon_center"><a href="#page_om_foodfein_anchor"><img class="arrow_up" src="img/arrow_up.png" alt="Arrow" width="15" height="15"></a></div>
+                            </section>
+                            <div id="ismejeri_img"></div>
+                        </div>
+                    </div>
+                </article>
+
+                    <script>
+                    // Slider START (1)
+                    var slideIndex = 1;
+                        showDivs(slideIndex);
+
+                    // Definer current slide
+                    function currentDiv(n) {
+                        showDivs(slideIndex = n);
+                    }
+
+                    function showDivs(n) {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides"); // mySlides = de forskellige slides
+                        var dots = document.getElementsByClassName("demo"); // demo = de forskellige menupunkter
+
+                        // Når man skifter slide, sæt tidligere slide til display none (så man ikke kan se den)
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";  
+                        }
+
+                        // sletter "active effect"
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" w3-red", "");
+                        }
+
+                        // Vis slide, sæt slide til display block (så man kan se den) + set menupunkt til "active effekt"
+                        x[slideIndex-1].style.display = "block";  
+                        dots[slideIndex-1].className += " w3-red"; //Tilføjer class med "activ effect"
+                    }
+                    </script>
+            </main>
+
+
+            <!-- PAGE INFO -->
+            <span class="anchor" id="page_info_anchor"></span>
+            <footer id="page_info">
+                <div class="orange_box1">
+                    <h2>ÅBNINGSTIDER</h2>
+                    <p><br>Mandag - Fredag: 07.30 - 19.00<br>
+                    Lørdag: 08.30 - 17.00<br>
+                    Søndag: 09.00 - 16.00</p>
+                </div>
+
+                <div class="orange_box2">
+                    <h2>KONTAKT</h2>
+                    <p><br><a target="blank" href="https://www.google.dk/maps/place/foodfein/@56.152915,10.204765,15z/data=!4m5!3m4!1s0x0:0x1a4a9ac35e07f7e7!8m2!3d56.152915!4d10.204765" title="Google Maps">
+                    Sønder Allé 6, <span>8000 Aarhus C <img id="google_map_icon" src="img/google_map.png" alt="Google Maps" height="20" width="20"></span></a><br><br>
+                    Silkeborgvej 236, <span>8230 Åbyhøj</span>
+                    <br><br>info@foodfein.dk​ <br>Tlf. 72 44 44 23<br><br><span class="font_small">Erhverv: allan@foodfein.dk <br>eller Tlf. 21 45 66 13</span></p>
+                </div>
+                
+                <div class="orange_box3">
+                    <h2>ARRANGEMENT</h2>
+                    <p><br><span class="font_small">Foodfein tilbyder lokaler med plads op til 40 personer til barnedåb, konfirmationer og lignende. 
+                    <br><br>Vi hjælper dig med at sammensætte en menu, som er tilpasset til sæsonens friske råvarer og dine ønsker. 
+                    <br><br>Arrangementets tidsramme aftales efter behov.
+                    <br><br>Ring til os nu på: 72 44 44 23</span></p>
+                </div>
+
+                <div id="page_info_img"></div>
+
+                <div class="social_icons">
+                        <a target="blank" href="http://www.findsmiley.dk/523565" title="Fødevarerapport"><img src="img/fodevarerapport.png" alt="Fødevarerapport" width="32" height="32"></a>
+                        <a href="https://www.facebook.com/Foodfein?rf=114975418709937" target="blank" title="Facebook"><img src="img/facebook.png" alt="Facebook" width="32" height="32"></a>
+                        <a href="#" target="blank" title="Instagram"><img src="img/instagram.png" alt="Instagram" width="32" height="32"></a>
+                        
+                </div>
+            </footer>
+
+
+
+<!-- MENUKORT MODAL BOKS -->
+<div class="modal modal_multi"> <!-- The Modal -->
+    <div class="modal-content" id="menukort-content"><div class="orange_box_modal"></div> <!-- Modal content -->
+        <span class="close close_multi" id="close_color">×</span>
+
+        <div id="box_menu_img"></div>
+        <div id="menukort">
+            <div id="menukort_top"><p>MENUKORT</p></div><br>
+
+            <div id="menukort_left">
+                <h3>MORGENMAD</h3>
+                    <p>Morgentallerken <span class="menukort_price">59,-</span><br>
+                    Stykke med smør, ost, marmelde og sky med
+                    müsli og blåbærsirup<br><br>
+                    Blødkogt æg med rugbrød<span class="menukort_price">27,-</span><br><br>
+                    Skyr med müsli og blåbærsirup<span class="menukort_price">27,-</span><br><br>
+                    Stykke med smør og ost<span class="menukort_price">30,-</span>
+                    </p><br><br>
+
+                <h3>BRUNCH</h3>
+                    <p>Islandsk skyr, müsli og blåbærsirup med
+                    tranebær og mandler, blødkogt æg, ravost fra
+                    Thise Mejeri, Brie de Meaux, hjemmelavet marmelade,
+                    hasselnøddecreme, villani skinke, bønnekompot,
+                    økologisk smør og saftigt brød bag i
+                    egen sten ovn.<br><br>
+                    Brunch pr person<span class="menukort_price">129,-</span></p><br><br>
+                
+                <h3>SALAT</h3>
+                    <p>Dagens salat af frisk grønt
+                    salaten servers med et stykke brød<br><br>
+                    TO STAY<span class="menukort_price">59,-</span><br>
+                    TO GO<span class="menukort_price">55,-</span><br><br>
+                    Tilvalg: okse, skinke, kalkun eller tun<span class="menukort_price">+19,-</span></p><br><br>
+
+
+                <h3>SUPPE</h3>
+                    <p>Italiensk tomatsuppe med crouton og grønt<br><br>
+                    Katoffel/porresuppe med pancetta og grønt<br><br>
+                    Supperne servers med et stykke børd<br><br>
+                    TO STAY<span class="menukort_price">69,-</span><br>
+                    TO GO<span class="menukort_price">59,-</span></p><br><br>
+
+
+                <h3>AFTENRETTER</h3>
+                    <p>
+                    <span class="font_strong">TO GO // Forbudbestilling</span><br><br>
+                    Tapastallerken<span class="menukort_price">159,-</span><br><br>
+                    Ose/kagetallerken<span class="menukort_price">59,-</span></p>
+            </div> <!-- #menukort_left -->
+
+            
+
+            <div id="menukort_right">
+                <h3>SMØRREBRØD</h3>
+                    <p>Varmrøget laks med basilikum cremeost, rogn og rugbrødchips<br><br>
+                    Spicy hummus med bagte pebefrugter og mynte<br><br>
+                    Peberstegt okse med svamperagout og grillede løg<br><br>
+                    Kalkun med ramsløgspesto og syltede røglød<br><br>
+                    TO STAY<br>
+                    1 stk<span class="menukort_price">39,-</span><br>
+                    2 stk<span class="menukort_price">75,-</span><br>
+                    3 stk<span class="menukort_price">99,-</span><br><br>
+                    TO GO<br>
+                    1 stk<span class="menukort_price">39,-</span><br>
+                    2 stk<span class="menukort_price">65,-</span><br>
+                    3 stk<span class="menukort_price">89,-</span></p><br><br>
+                
+                <h3>TAPASTALLERKEN</h3>
+                    <p>Varmrøget norsk laks med basilikum aioli, rogn og rugbrødschips<br><br>
+                    Pulled lamb med dild og rejer<br><br>
+                    Peberstegt okse med svamperagout og syltede rødløg<br><br>
+                    Hjemmelavet grøn og rød pesto samt Spicy hummus<br><br>
+
+                    Blandt salat af frisk grønt Foodfeins stenovnsbagte brød<br><br>
+
+                    Tapas pr person<span class="menukort_price">159,-</span></p><br><br>
+
+                <h3>SANDWICH</h3>
+                    <p>Kalkun med anaschutney og basilikumsaioli<br><br>
+                    Varmrøget norsk laks med basilikum vremeost og lemon<br><br>
+                    Peberstegt okse med ramsløgspesto og syltede rødløg<br><br>
+                    Pulled lamb med hjemmerørt mayo, dild og rejer<br><br>
+                    TO STAY<span class="menukort_price">59,-</span><br>
+                    TO GO<span class="menukort_price">49,-</span></p>
+            </div> <!-- #menukort_right -->
+            
+        </div> <!-- #menukort -->
+    </div> <!-- Modal content -->
+</div> <!-- modal modal_multil -->
+
+
+<!-- TO GO AARHUS C MODAL BOKS -->
+<div class="modal modal_multi"> <!-- The Modal -->
+    <div class="modal-content" id="to_go-content"><div class="orange_box_modal"></div> <!-- Modal content -->
+        <span class="close close_multi">×</span>
+            <div class="to_go">
+                <h2><br>TO GO // <span style="display: inline-block;">AARHUS C</span></h2><br><br><br><br>
+
+                <form action="script/to_go.php" method="post">
+                    <div id="to_go_order">
+                        <h3>SMØRREBRØD</h3><br>
+                        <p><input type="text" class="order_amount" name="amount[]" placeholder="0">
+                        <input class="order" type="checkbox" name="menu_item[]" value="Smørrebrød med laks">Varmrøget laks med basilikum, cremeost, rogn og rugbrødchips<br>
+                        
+                        <input type="text" class="order_amount" name="amount[]" placeholder="0">
+                        <input class="order" type="checkbox" name="menu_item[]" value="Smørrebrød med hummus">Spicy hummus med bagte peberfrugter og mynte<br>
+
+                        <input type="text" class="order_amount" name="amount[]" placeholder="0">
+                        <input class="order" type="checkbox" name="menu_item[]" value="Smørrebrød med okse">Peberstegt okse med svamperagout og grillede løg<br>
+
+                        <input type="text" class="order_amount" name="amount[]" placeholder="0">
+                        <input class="order" type="checkbox" name="menu_item[]" value="Smørrebrød med kalkun">Kalkun med ramsløgspesto og syltede rødløg<br><br><br>
+
+                        <h3>SANDWICH</h3> <br>
+                        <input type="text" class="order_amount" name="amount[]" placeholder="0">
+                        <input class="order" type="checkbox" name="menu_item[]" value="Sandwich med kalkun">Kalkun med ananaschutney og basilikumsaioli<br>
+
+                        <input type="text" class="order_amount" name="amount[]" placeholder="0">
+                        <input class="order" type="checkbox" name="menu_item[]" value="Sandwich med laks">Varmrøget norsk laks med basilikum cremeost og lemon<br>
+
+                        <input type="text" class="order_amount" name="amount[]" placeholder="0">
+                        <input class="order" type="checkbox" name="menu_item[]" value="Sandwich med okse">Peberstegt okse med ramsløgspesto og syltede rødløg<br>
+
+                        <input type="text" class="order_amount" name="amount[]" placeholder="0">
+                        <input class="order" type="checkbox" name="menu_item[]" value="Sandwich med lam">Pulled lamb med hjemmerørt mayo, dild og rejer<br>
+                    </div><!-- #to_go_order --><br>
+
+                    <div id="to_go_send">
+                        <span class="font_strong font_small">DATO FOR AFHENTNING</span><br> <input type="text" name="dato" id="datepicker-13"> <br><br>
+                        <span class="font_strong font_small">ØNSKET TIDSPUNKT *</span><br> <input type="text" name="tid" id="timepicker" data-time-format="H:i" data-step="15" data-min-time="08:00" data-max-time="18:00" data-show-2400="true"/><br><br>
+
+                        <span class="font_strong font_small">NAVN</span><br> <input type="text" name="navn"><br><br>
+                        <span class="font_strong font_small">EMAIL</span><br> <input type="text" name="email"><br><br>
+                        
+                      
+                        <span class="font_strong font_small">YDERLIGERE KOMMENTAR</span> <br> <textarea name="besked" style="width: 250px; height: 60px;"></textarea><br><br>
+                        <input type="submit" value="BESTIL">
+                        <p id="obs">*Du modtager en mail, når din bestilling er godkendt <br> med et tidspunkt for afhentning.</p>
+                    </div> <!-- #to_go_send -->
+                </form>
+            </div> <!-- to_go -->
+    </div> <!-- Modal content -->
+</div> <!-- modal modal_multil -->
+
+
+<!-- TO GO ÅBYHØJ MODAL BOKS -->
+<div class="modal modal_multi"> <!-- The Modal -->
+    <div class="modal-content" id="to_go-content_1"><div class="orange_box_modal"></div> <!-- Modal content -->
+        <span class="close close_multi">×</span>
+            <div class="to_go">
+                <h2><br>TO GO // ÅBYHØJ</h2><br><br><br>
+                <p>KOMMER SNART!</p>
+            </div> <!-- to_go -->
+    </div> <!-- Modal content -->
+</div> <!-- modal modal_multil -->
+
+
+
+        </div> <!-- #wrapper -->
+
+        
+        <script src="script/script.js"></script>
+        </div> <!-- MOBILE NAVIGATION CLOSE: hvis man klikker lukkes menuen -->
+    </body>
+</html>

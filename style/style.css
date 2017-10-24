@@ -1,0 +1,1232 @@
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+GENERAL SETTINGS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* Sætter skrift type og farve for hele dokumentet */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #3c3c3b;}
+
+/* centrer alt centent og giver max brede */
+#wrapper {
+    margin: 0 auto;
+    max-width: 1366px;
+    position: relative;}
+
+
+/* Tekst boksene */
+section {
+    position: relative; /* kan flytte på elementet i forhold til opbrindelig placering */
+    background-color: #ececec;
+    padding: 45px 30px;}
+
+/* Overskrift til tekst boksene */
+section h2 {
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 15px;
+    font-size: 24px;}
+
+/* Orange kant rundt on boks */
+.orange_box {
+    position: absolute; /* kan flytte på elementet i forhold til 'parent' elements opbrindelig placering (parent elementet skal være position: relative) */
+    z-index: -1; /* flytter elementet bagud */
+    border: 3px solid #eb5b29;
+    height: 100%;
+    width: 100%;
+    padding: 20px;}
+
+/* Overskrift i orange boks */
+h1 {
+    color: #ececec;
+    font-size: 32px;
+    font-weight: 700;}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #3c3c3b;}
+
+a:hover {opacity: 0.5;}
+
+
+/* Navigation: bestemmer position mm. */
+nav {
+    display: flex;
+    justify-content: center; /* Bruger flexbox til at centere */
+    opacity: 1; /* når opacity er sat til 1 vil den IKKE være gennemsigtig */
+    width: 100%;}
+
+/* Navigations punkterne stå på linje */
+nav li {display: inline-flex;}
+
+nav a {text-decoration: none;}
+
+.anchor {
+  display: block;
+  height: 65px; /*same height as header*/
+  margin-top: -65px; /*same height as header*/
+  visibility: hidden;}
+
+.anchor_slide {
+  display: block;
+  height: -100px; /*same height as header*/
+  margin-top: 100; /*same height as header*/
+  visibility: hidden;}
+
+.font_strong {font-weight: 700;}
+.font_small {font-size: 12px;}
+.font_large {font-size: 44px;}
+.font_i {font-style: italic;}
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+HTML FORM SETTINGS: TO GO + obs
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+/* KOMMENTAR FELT */
+textarea {
+    border: solid 1px #3c3c3b;
+    background-color: #ececec;
+    resize: none;}
+
+/* TEKSTFELT */
+input[type=text] {
+    width: 250px;
+    border: solid 1px #3c3c3b;
+    background-color: #ececec;
+    color: #3c3c3b;
+    padding-left: 2px;
+    padding-right: 2px;}
+
+/* TEKSTFELT: VÆLG ANTAL (#to_go_order) */
+#to_go_order input[type=text] {
+    position: relative;
+    top: -3px;
+    width: 21px;
+    text-align: center;
+    margin-left: -25px;
+    border: solid 1px #878786;
+    color: #eb5b29;
+    font-weight: 700;}
+
+/* SUBMIT KNAP */
+input[type=submit] {
+    padding: 10px 20px;
+    border: none;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    color: #ececec;
+    background-color: #878786;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;}
+
+input[type=submit]:hover {
+    opacity: 0.5;}
+
+/* CHECKBOX */
+input[type=checkbox] {
+    border-radius:15px;
+    -webkit-appearance:button;
+    white-space: nowrap;
+    overflow:hidden;
+    width:10px;
+    height:10px;
+    margin-right: 10px;
+    border: double 1px #3c3c3b;
+    background-color:#ececec;}
+
+input[type=checkbox]:checked {
+    background-color:#eb5b29;
+    border: none;}
+
+input[type=checkbox]:hover {
+    box-shadow:0px 0px 10px #eb5b29;}
+
+
+/*MOVE*/
+#obs {
+    position: absolute;
+    bottom: -50px;
+    font-size: 11px;
+    width: 300px;
+    left: -8px;}
+
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+MOBILE NAVIGATION (BURGER/SIDE NAV)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+#mobile_nav {
+    display: block;
+    background-image: url('../img/mobile_nav.png');
+    height: 30px;
+    width: 50px;
+    z-index: 100;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;}
+
+#mobile_nav:hover {opacity: 0.5;}
+
+.icon_center {text-align: center;}
+
+.icon_center a {
+    text-decoration: none;
+    color: #3c3c3b;}
+
+.icon_center a:hover {
+    color: #eb5b29;}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 101; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #3c3c3b; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */}
+
+#mySidenav img {
+    position: relative;
+    top: -40px;}
+
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 14px 8px 14px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ececec;
+    display: block;
+    font-weight: 600;
+    width: 260px;}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, a:focus{
+    opacity: 0.5;}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    width: 0;}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOLLOW NAVIGATION: NOT ACTIVE IN MOBILE VERSION
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+#follow_nav {display: none;}
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+HEADER
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+/* To make background image work with opacity and menu (Coyier, C., 2013) */
+
+#foodfein_logo_mobile {
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    height: 150px;
+    width: auto;}
+
+/* MAIN/TOP NAVIGATION */
+#main_nav {display: none;}
+
+/* Baggrunds billede mm. */
+header {
+    background: url('../img/photos/tapas.jpg');
+    background-size: cover;
+    position: relative;
+    z-index: 1; /* flytter elementet foran*/
+    height: 90vh; /* skal fylde 90% af VINDUETS størrelse */
+    min-height: 500px; /* skal ikke fylde mindre ind 500px */
+    margin-bottom: 330px;}
+
+
+/* Header Nyheds box */
+    header section p {text-align: center;}
+
+    header section {
+        position: absolute;
+        bottom: -30%;
+        right: 8%;}
+
+    header .orange_box {
+        top: -80px;
+        left: -35px;}
+
+/* Social media icons */
+    .social_icons {position: absolute;} /* sættes i forhold til header elementet */
+
+    .social_icons img {padding: 0 2px;}
+
+    .social_icons a:hover {opacity: 0.5;}
+
+header .social_icons {
+    top: 20px; /* SKAL lave RESET senere hvis man vil ændre position */
+    right: 20px; /* SKAL lave RESET senere hvis man vil ændre position */
+    }
+
+#arrow_down {display: none;}
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOODFEIN: NOT ACTIVE IN MOBILE VERSION
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+#page_foodfein {display: none;}
+
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+MENUKORT PAGE
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+#page_menu {
+    min-height: 700px;
+    position: relative;
+    z-index: 1;
+    background-color: #878786;
+    margin-bottom: 30px;}
+
+#page_menu section {
+    position: absolute;
+    left: 35%;
+    bottom: 30%;
+    width: 300px;}
+
+#page_menu section p {text-align: center;}
+
+#page_menu .orange_box {
+    top: -35%;
+    left: -25%;
+    width: 100%;
+    height: 100px;}
+
+#page_menu_img {
+    position: absolute;
+    background-image: url('../img/photos/tapas_menukort.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;}
+
+#page_menu .myBtn_multi {
+    display: block;
+    margin: 0 auto;}
+
+/*MOVE*/
+#page_bestilling .myBtn_multi {
+    background-color: #878786;
+    color: #ececec;
+    margin: 20px 10px;
+    width: 120px;
+    height: 50px;}
+
+.myBtn_multi {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #3c3c3b;
+    display: inline-block;}
+
+.myBtn_multi:hover {opacity: 0.5;}
+      /*MOVE*/
+        /* The Modal TO GO */
+        .to_go {
+            position: absolute;
+            width: 80%;
+            left: 10%;
+            top: 0;
+            padding: 50px;
+            z-index: 9997;}
+
+        #to_go-content {height: 670px;}
+
+        #to_go-content_1 {height: 300px;}
+
+        #to_go-content h2, #to_go-content_1 h2 {
+            text-align: center;
+            font-weight: 700;
+            font-size: 32px;}
+
+        #to_go-content_1 p {text-align: center;}
+
+        #to_go_order {
+            position: absolute;
+            left: 50px;
+            display: inline-block;}
+
+        .to_go h3 {
+            font-size: 16px;
+            font-weight: 700;}
+
+        #to_go_send {
+            position: absolute;
+            right: 50px;
+            display: inline-block;}
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+GENERAL SETTINGS: MODAL BOX
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9998; /* Sit on top */
+    padding-top: 30px; /* Location of the box */
+    padding-bottom: 30px;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #ececec;
+    margin: auto;
+    padding: 50px;
+    width: 95%;
+}
+
+/* The Close Button */
+.close {
+    color: #3c3c3b;
+    float: right;
+    font-size: 42px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 9999;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #eb5b29;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#close_color {
+    color: #3c3c3b;
+}
+
+#close_color:hover, .close_color:focus {
+    color: #eb5b29;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+MENUKORT: MODAL BOX
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+/*
+@media only screen and (max-width: 627px) {
+        #menukort {
+            padding: 10px;
+            padding-top: 50px;
+        }
+}
+
+@media only screen and (max-width: 476px) {
+    #menukort {
+        margin-left: -15px;
+    }
+}
+
+
+@media only screen and (max-width: 386px) {
+    #menukort {
+        margin-left: -25px;
+    }
+}*/
+
+#menukort {
+    position: relative;
+    width: 90%;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    height: auto;}
+
+#box_menu_img {
+    display: none;}
+
+.orange_box_modal {
+    top: 10px;
+    left:  10px;
+    right:  10px;
+    bottom:  10px;
+    z-index: 2;
+    position: absolute; /* kan flytte på elementet i forhold til 'parent' elements opbrindelig placering (parent elementet skal være position: relative) */
+    border: 3px solid #eb5b29;}
+
+#menukort h3 {
+    font-size: 16px;
+    font-weight: 700;}
+
+#menukort p {font-size: 14px;}
+
+#menukort_top p {
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;}
+
+        #menukort_top {
+            margin: 0 auto;
+            width: 100%;
+            margin-right: 0px;
+        }
+
+        #menukort_left {
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            width: 45%;
+            left: 0;
+            margin-top: 20px;
+            padding-right: 50px;
+            margin-right:40px;
+        }
+
+        #menukort_right {
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            width: 45%;
+            right: 0;
+            margin-top: 20px;
+            padding-right: 50px;
+        }
+
+.menukort_price {
+    position: absolute;
+    right: 0;}
+
+#menukort_price p {text-align: right;}
+
+        
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+TO GO PAGE
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+#page_bestilling {
+    min-height: 700px;
+    position: relative;
+    z-index: 1;
+    text-align: center;}
+
+#page_bestilling section {
+    position: absolute;
+    max-width: 500px;
+    left: 35%;
+    top: 40%;
+    background-color: transparent;}
+
+#page_bestilling section p {
+    text-align: center;
+    color: #ececec;
+    font-weight: 700;}
+
+#page_bestilling .orange_box {
+    top: -80px;
+    left: -40%;
+    max-width: 150%;
+    height: 100px;}
+
+#page_bestilling .orange_box h1 {
+    color: #ececec;
+    text-align: left;}
+
+#page_bestilling_img {
+    position: absolute;
+    background-image: url('../img/photos/foodfein_cafe.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -2;}
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+OM FOODFEIN PAGE
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+#page_om_foodfein {
+    min-height:550px;
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;}
+
+#page_om_foodfein section {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 200px;
+    padding: 45px 50px;}
+
+#page_om_foodfein .orange_box {
+    top: -75px;
+    left: 5%;
+    width: 300px;
+    height: 100px;
+    z-index: 2;}
+
+#foodfein_img {
+    position: absolute;
+    background-image: url('../img/photos/foodfein.jpg');
+    background-size: cover;
+    background-position-y: -150px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 450px;
+    margin-top: 50px;
+    top: 0;
+    left: 0;
+    z-index: -2;}
+
+#mølleri_img {
+    position: absolute;
+    background-image: url('../img/photos/molleri.jpg');
+    background-size: cover;
+    background-position-y: -100px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 450px;
+    margin-top: 50px;
+    top: 0;
+    left: 0;
+    z-index: -2;}
+
+#kaffe_img {
+    position: absolute;
+    background-image: url('../img/photos/kaffe.png');
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    margin-top: 50px;
+    top: 0;
+    left: 0;
+    z-index: -2;}
+
+#ismejeri_img {
+    position: absolute;
+    background-image: url('../img/photos/hjemmelavetis.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    margin-top: 50px;
+    top: 0;
+    left: 0;
+    z-index: -2;}
+
+.arrow_up {
+    position: relative;
+    bottom: -15px;}
+
+/* Slideshow navgation */
+.w3-container {height: 50px;} /* Navigations højden */
+
+
+.w3-center {
+    text-align: center;
+    line-height: 50px; /* samme som navigations højden, center horizontal */
+}
+
+.w3-container span {
+    padding: 0 20px;
+    cursor: pointer; /* Giver span elementet en hånd når man hover over så det ligner man kan klikke på den */
+}
+.w3-center a {font-weight: 500;}
+
+.w3-container span:active {font-weight: 700;}
+
+.w3-container span:hover {font-weight: 700;}
+
+.w3-red {
+    color: #eb5b29;
+    font-weight: 700;}
+
+/* Slideshow */
+.mySlides {
+    display:none;
+    width: 100%;}
+
+.mySlides p {
+    text-align: justify;
+    font-size: 15px;}
+
+.w3-content {width: 100%;}
+
+/*MOVE*/
+.to_go p {
+    text-align: left;
+    line-height: 1.3;}
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+INFO PAGE
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+#page_info {
+    min-height: 800px;
+    position: relative;
+    z-index: 1;
+    background-color: #878786;
+    color: #ececec;
+    margin-top: 50px;}
+
+#page_info h2 {
+    font-weight: 750;
+    text-align: center;}
+
+#page_info p {text-align: center;}
+
+
+#page_info .orange_box1 {
+    left: 5%;
+    width: 90%;
+    height: auto;
+    position: absolute; /* kan flytte på elementet i forhold til 'parent' elements opbrindelig placering (parent elementet skal være position: relative) */
+    border: 3px solid #eb5b29;
+    padding: 20px 40px;
+    top: 4%;}
+
+#page_info .orange_box2 {
+    left: 5%;
+    width: 90%;
+    height: auto;
+    position: absolute; /* kan flytte på elementet i forhold til 'parent' elements opbrindelig placering (parent elementet skal være position: relative) */
+    border: 3px solid #eb5b29;
+    padding: 20px 40px;
+    top: 25%;}
+
+#page_info .orange_box2 span {display: inline-block;}
+
+#page_info .orange_box3 {
+    left: 5%;
+    width: 90%;
+    position: absolute; /* kan flytte på elementet i forhold til 'parent' elements opbrindelig placering (parent elementet skal være position: relative) */
+    border: 3px solid #eb5b29;
+    padding: 20px 40px;
+    top: 58%;}
+
+#page_info_img {display: none;}
+
+footer .social_icons {
+    left: 50%;
+    top: auto;
+    bottom: 5px;
+    margin-left: -55px;}
+
+#google_map_icon {
+    position: relative;
+    top: 5px;
+    margin-top: -20px;
+    height: 20px;
+    width: auto;}
+
+#page_info a {color: #ececec;}
+
+
+
+/* HEADER BREAKPOINTS
+------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 580px) {
+    header section {
+        position: absolute;
+        bottom: -30%;
+        right: 8%;}
+
+    header .orange_box {
+        top: -80px;
+        left: -35px;}
+}
+
+
+/* TO GO MODAL BREAKPOINTS
+------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 1180px) {
+    .to_go {
+        width: 90%;
+        left: 5%;}
+}
+
+
+@media only screen and (max-width: 1080px) {
+    .to_go {
+        width: 98%;
+        left: 2%;}
+}
+
+@media only screen and (max-width: 970px) {
+    #to_go_order {
+        position: relative;
+        left: 20%;
+        margin-bottom: 50px;
+        width: 60%;
+        font-size: 14px;}
+
+    #to_go_send {
+        position: relative;
+        left: 50%;
+        margin-left: -125px;}
+
+    #to_go-content {height: 1000px;}
+
+    .to_go h3 {
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;}
+
+    input[type=submit] {
+        display: inline-block;
+        margin-left: 85px;}
+}
+
+
+@media only screen and (max-width: 903px) {
+    #to_go_order {
+        left: 10%;
+        width: 80%;}
+
+    #to_go_send {
+        left: 50%;
+        margin-left: -125px;}
+}
+
+@media only screen and (max-width: 729px) {
+    #to_go-content {height: 1000px;}
+}
+
+@media only screen and (max-width: 635px) {
+    #to_go-content {height: 1050px;}
+}
+
+@media only screen and (max-width: 579px) {
+    #to_go-content {height: 1100px;}
+}
+
+@media only screen and (max-width: 523px) {
+    #to_go-content {height: 1150px;}
+
+    #menukort {padding: 0;}
+
+    #menukort_top {
+            margin-right: 100px;
+        }
+}
+
+@media only screen and (max-width: 484px) {
+    #to_go-content {height: 1100px;}
+
+    .to_go {padding: 20px;}
+
+}
+
+@media only screen and (max-width: 392px) {
+    #to_go-content {height: 1150px;}
+}
+
+/* 
+------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 500px) {
+    header {
+        margin-bottom: 210px;
+        height: auto;} /* RESET */
+
+
+    #foodfein_logo_mobile {left: 35%;}
+
+        #page_menu section {
+        left: 12%;
+        bottom: 30%;
+        width: 75%;}
+
+    #page_menu .orange_box {
+        top: -32%;
+        left: -8%;
+        width: 80%;}
+
+
+    #page_bestilling section {
+        width: auto;
+        left: 8%;}
+
+    #page_bestilling .orange_box {
+        top: -80px;
+        left: -1%;
+        max-width: 150%;
+        height: 100px;}
+
+    #page_om_foodfein {margin-bottom: 80px;}
+
+    .w3-container {font-size: 16px;}
+
+    .w3-container span {padding: 0 5px;}
+
+    #page_info {min-height: 800px;}
+
+    footer .social_icons {
+        left: 50%;
+        margin-left: -55px;}
+}
+
+@media only screen and (max-width: 420px) {
+#page_info {min-height: 900px;}
+}
+
+@media only screen and (max-width: 352px) {
+#page_info {min-height: 1000px;}
+}
+
+/* 
+------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 430px) {
+    #foodfein_logo_mobile {left: 30%;}
+
+    #page_om_foodfein {margin-bottom: 160px;}
+}
+
+@media only screen and (max-width: 350px) {
+
+    #foodfein_logo_mobile {
+    left: 35%;
+    height: auto;
+    width: 100px;}
+
+    #page_om_foodfein {margin-bottom: 260px;}
+
+    #page_om_foodfein .orange_box {width: 270px;}
+}
+
+
+/* 
+------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1180px) {
+
+    #menukort {
+        padding: 50px;
+        width: 100%;
+    }
+
+    #menukort_top p {
+    text-align: center;}
+
+    #menukort_left {
+        width: 100%;
+        position: relative;
+        left: -5%;
+        margin-top: 50px;
+        padding-right: 50px;}
+
+    #menukort_right {
+        width: 100%;
+        position: relative;
+        left: -5%;
+        margin-top: 50px;
+        padding-right: 50px;}
+}
+
+@media only screen and (max-width: 627px) {
+        #menukort {
+            padding: 15px;
+            padding-top: 50px;
+        }
+}
+
+@media only screen and (min-width: 768px) {
+    #box_menu_img {
+        position: absolute;
+        display: block;
+        background-image: url('../img/photos/menukort_brunch.jpg');
+        background-size: cover;
+        background-position-x: -500px;
+        background-repeat: no-repeat;
+        width: 40%;
+        height: 100%;
+        top: 0;
+        right: 0;}
+    
+    #menukort {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #close_color {color: #ececec;}
+
+    #close_color:hover, .close_color:focus {
+        color: #eb5b29;
+        text-decoration: none;
+        cursor: pointer;}
+
+    /* MOBILE NAVIGATION */
+    #mobile_nav {display: none;}
+
+    /* FOLLOW NAVIGATION */
+    #follow_nav {
+        position: fixed;
+        max-width: 1366px;
+        top: 0;
+        z-index: 99;
+        height: 65px;
+        background-color: #eb5b29;
+        opacity: 0.9;
+        display: none;}
+
+    #follow_nav img {
+        position: relative;
+        bottom: -13px;}
+
+    #follow_nav ul {line-height: 50px;}
+
+    #follow_nav a {
+        color: #ececec;
+        padding: 0px 15px;
+        font-weight: 600;}
+
+    #menukort {width: 60%;}
+
+    /* HEADER */
+    header {margin-bottom: 200px;}
+
+    header section {
+        position: absolute;
+        bottom: 10%;
+        right: 15%;}
+
+    #foodfein_logo_mobile {display: none;}
+
+    /* MAIN/TOP NAVIGATION */
+    #main_nav {
+        display: flex;
+        position: relative;
+        top: -60px; /* position logo */
+        font-weight: 600;}
+
+    #main_nav a {
+        padding: 0px 15px;
+        color: #FFF;}
+
+    .color_orange {color: #eb5b29;} /* Navigation "Bestilling" */
+
+    #foodfein_logo {
+        position: relative;
+        top: 80px; /* position logo */}
+
+    header .social_icons {
+        top: auto; /* RESET Posistion from earlier - Det bliver muligt at ændre placering igen */
+        right: auto; /* RESET Posistion from earlier  - Det bliver muligt at ændre placering igen */
+        left: 2%;
+        bottom: 2%;}
+
+    #arrow_down {
+        display: block;
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        opacity: 0.8;
+        margin-left: -25px;}
+
+    /* PAGE FOODFEIN */
+    /* Foodfein
+    -------------------------------------------------------------------------------------------------------*/
+    #page_foodfein {
+        min-height: 460px;
+        display: block;}
+
+    #page_foodfein p {
+        font-size: 14px;
+        line-height: 1.3;}
+
+    #page_foodfein section {
+        position: absolute;
+        right: 50%;
+        text-align: justify;
+        max-width: 367px;
+        padding-left: 50px;
+        padding-right: 50px;}
+
+    #page_foodfein .orange_box {
+        top: -30%;
+        left: -10%;
+        width: 120%;
+        height: 70%;}
+
+    #page_foodfein_img {
+        position: absolute;
+        background-image: url('../img/photos/foodfein.jpg');
+        background-size: cover;
+        background-color: #FFF;
+        opacity: 0.7;
+        width: 485px;
+        height: 350px;
+        top: -15%;
+        left: 70%;
+        z-index: -2;}
+
+    /* PAGE MENUKORT */
+    #page_menu_img {width: 55%;}
+
+    #page_menu section {
+        left: 58%;
+        bottom: 30%;
+        padding: 40px 60px;}
+
+    #page_menu .orange_box {
+        top: -35%;
+        left: -50%;
+        height: 120px;
+        width: 120%;}
+
+    /* PAGE ONLINE BESTILLING */
+    #page_bestilling .orange_box {
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: 100px;
+        top: -105%;
+        left: -45%;}
+
+    #page_bestilling section {
+        max-width: 500px;
+        left: 35%;
+        top: 40%;}
+
+    /* PAGE OM FOODFEIN */
+    #page_info h2 {text-align: left;}
+
+    #page_info p {text-align: left;}
+
+    #page_om_foodfein {min-height: 800px;}
+
+    #page_om_foodfein section {
+        width: 500px;
+        left: 30%;
+        top: 300px;}
+
+    #page_om_foodfein .orange_box {
+        top: -75px;
+        left: -17%;
+        width: 300px;}
+
+    /* PAGE INFO */
+    #page_info {max-height: 1366px;}
+
+    #page_info .orange_box1 {
+        left: 15%;
+        width: 500px;
+        height: auto;
+        position: absolute; /* kan flytte på elementet i forhold til 'parent' elements opbrindelig placering (parent elementet skal være position: relative) */
+        border: 3px solid #eb5b29;
+        padding: 20px 40px;
+        top: 5%;}
+
+    #page_info .orange_box2 {
+        left: 15%;
+        width: 500px;
+        height: auto;
+        position: absolute; /* kan flytte på elementet i forhold til 'parent' elements opbrindelig placering (parent elementet skal være position: relative) */
+        border: 3px solid #eb5b29;
+        padding: 20px 40px;
+        top: 27%;}
+
+    #page_info .orange_box3 {
+        left: 15%;
+        width: 500px;
+        position: absolute; /* kan flytte på elementet i forhold til 'parent' elements opbrindelig placering (parent elementet skal være position: relative) */
+        border: 3px solid #eb5b29;
+        padding: 20px 40px;
+        top: 62%;}
+
+    #page_info_img {
+        position: absolute;
+        background-image: url('../img/photos/foodfein_to_go.jpg');
+        background-size: cover;
+        display: block;
+        width: 55%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: -2;}
+
+    footer .social_icons {
+        top: auto; /* RESET Posistion from earlier - Det bliver muligt at ændre placering igen */
+        right: auto; /* RESET Posistion from earlier  - Det bliver muligt at ændre placering igen */
+        left: auto;
+        bottom: 7px;
+        left: 47.5%}
+
+    #google_map_icon {height: 25px;}
+
+
+    #bestilling {
+        position: absolute;
+        width: 30%;}
+
+    #bestilling_top {
+        width: 90%;
+        position: absolute;
+        left: 0;}
+
+    #bestilling_top p {margin-left: 30px;}
+
+    #bestilling input {
+        margin-left: -25px;
+        margin-right: 10px;}
+} /* BREAKPOINT: min-width: 768px */
